@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
-
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeColor="#E3F2FD"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,36 +19,42 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/taskCheckBox"/>
+            android:id="@+id/taskCheckBox"
+            android:buttonTint="#4CAF50" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="8dp">
-            
+            android:layout_marginStart="12dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/taskTitle"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="#1A237E"
+                android:layout_marginBottom="4dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/taskDescription"
-                android:textSize="14sp"/>
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:alpha="0.8"/>
         </LinearLayout>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-android:layout_gravity="center"
-        android:id="@+id/deleteButton"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/todo1"
-        android:src="@drawable/baseline_delete_outline_24"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/deleteButton"
+            android:contentDescription="@string/todo1"
+            android:src="@drawable/baseline_delete_outline_24"
+            android:tint="#E57373"
+            android:padding="8dp"/>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_primary"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -12,16 +13,23 @@
         android:layout_height="0dp"
         android:id="@+id/tasksRecyclerView"
         android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
         app:layout_constraintBottom_toTopOf="@id/addTaskButton"
         app:layout_constraintTop_toTopOf="parent"/>
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/addTaskButton"
-        android:layout_margin="16dp"
+        android:layout_margin="20dp"
         android:contentDescription="@string/todo"
+        app:backgroundTint="@color/fab_background"
+        app:tint="@color/fab_icon"
+        app:elevation="8dp"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/fab_ripple"
         app:layout_constraintBottom_toBottomOf="parent"
         android:src="@drawable/outline_add_24"
         app:layout_constraintEnd_toEndOf="parent"/>

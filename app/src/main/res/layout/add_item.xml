@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
-    android:id="@+id/dialogLogout">
+    android:id="@+id/dialogLogout"
+    android:background="#F8F9FA">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -14,16 +15,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/title">
-        
+        android:hint="@string/title"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="#2196F3"
+        app:hintTextColor="#2196F3"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/titleEdit"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColor="#333333"
+            android:textColorHint="#999999"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -32,16 +41,23 @@
         app:layout_constraintTop_toBottomOf="@id/textTitle"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        android:hint="@string/description">
+        android:hint="@string/description"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="#FF9800"
+        app:hintTextColor="#FF9800"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/descriptionEdit"
             android:inputType="textMultiLine"
-            android:minLines="2"/>
+            android:minLines="2"
+            android:textColor="#333333"
+            android:textColorHint="#999999"/>
     </com.google.android.material.textfield.TextInputLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
